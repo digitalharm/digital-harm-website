@@ -34,6 +34,11 @@ pnpm build        # prebuild runs the search-registry + content-invariant guards
 
 Stack: Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Source Serif 4 + Inter.
 
+## Deployment
+
+Hosted on Vercel. Pushes to `main` build and deploy automatically to
+production at **https://digitalharm.org** via Vercel's GitHub integration.
+
 ## Editorial notes
 
 - Chapters are content-data-driven, sourced from a single typed file per locale
