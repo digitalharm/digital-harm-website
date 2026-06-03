@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Staleness control: fails if any named individual in a `verified`-stamped
+      # section (the platform leadership org charts) lacks a primary-source
+      # citation. The most perishable content on the site cannot rot silently.
+      - name: Perishable-citation guard
+        run: pnpm lint:perishable
+
+      # Content invariants: ICD-11 present, skeptics absent, no on-site
+      # trackers, review bylines dark, crisis hotline numbers intact.
+      - name: Content-invariant guard
+        run: pnpm lint:invariants
+
+      # Typecheck + production build gate. (prebuild also runs lint:search +
+      # lint:invariants, so a broken registry or invariant fails the build too.)
+      - name: Build
+        run: pnpm build

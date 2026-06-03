@@ -1,0 +1,32 @@
+{
+  "name": "digital-harm-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:perishable": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning scripts/check-perishable-citations.ts",
+    "lint:search": "node scripts/check-search-registry.mjs",
+    "lint:invariants": "node scripts/check-content-invariants.mjs",
+    "snapshot:dates": "node scripts/snapshot-route-dates.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "prebuild": "npm run lint:search && npm run lint:invariants"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
