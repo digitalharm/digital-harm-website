@@ -41,7 +41,7 @@ export function SiteFooter() {
             </li>
             <li>
               <a
-                href="https://fightsam.com"
+                href="https://fightcsam.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-accent"

@@ -360,7 +360,7 @@ export default function ToolsPage() {
           </div>
           <div className="md:col-span-4 md:text-right">
             <a
-              href="https://fightsam.com"
+              href="https://fightcsam.org"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-background text-foreground px-4 py-2.5 rounded-md text-sm font-medium hover:bg-background/90 transition-colors"
@@ -520,7 +520,7 @@ export default function ToolsPage() {
                   </div>
                   <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm mt-auto">
                     <a
-                      href={`https://fightsam.com/docs/${t.slug}`}
+                      href={`https://fightcsam.org/docs/${t.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent hover:underline underline-offset-2"
