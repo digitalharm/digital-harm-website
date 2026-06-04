@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "For Developers",
   description:
-    "A hands-on implementation guide for engineers building CSAM detection and prevention: the detection pipeline, perceptual vs cryptographic hashing (PhotoDNA, PDQ/TMK), matching the NCMEC and IWF hash lists, how to handle a match without mishandling the file, AI-generation safeguards, testing without real material, and the FightSAM open-source toolkit.",
+    "A hands-on implementation guide for engineers building CSAM detection and prevention: the detection pipeline, perceptual vs cryptographic hashing (PhotoDNA, PDQ/TMK), matching the NCMEC and IWF hash lists, how to handle a match without mishandling the file, AI-generation safeguards, testing without real material, and the FightCSAM open-source toolkit.",
 };
 
 type Topic = {
@@ -302,7 +302,7 @@ const topics: Topic[] = [
         <p>
           The{" "}
           <Link href="/tools" className="text-accent underline underline-offset-2">
-            FightSAM
+            FightCSAM
           </Link>{" "}
           portfolio is the buildable layer beneath the detection landscape &mdash; designed
           so any platform can wire up the same protection as a much larger one,
@@ -477,7 +477,7 @@ export default function ForDevelopersPage() {
                   detection technical-depth section.
                 </li>
                 <li>
-                  <Link href="/tools">Tools (open source)</Link> &mdash; the FightSAM
+                  <Link href="/tools">Tools (open source)</Link> &mdash; the FightCSAM
                   portfolio with per-tool status and the repository link.
                 </li>
                 <li>

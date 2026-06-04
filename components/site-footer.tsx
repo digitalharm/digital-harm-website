@@ -46,7 +46,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-accent"
               >
-                FightSAM — Developer Docs ↗
+                FightCSAM — Developer Docs ↗
               </a>
             </li>
             <li>

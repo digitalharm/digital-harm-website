@@ -350,10 +350,10 @@ export default function ToolsPage() {
               For developers
             </p>
             <h2 className="font-serif text-xl md:text-2xl font-semibold tracking-tight leading-tight mb-1.5">
-              Build with these tools at FightSAM.
+              Build with these tools at FightCSAM.
             </h2>
             <p className="text-sm md:text-[0.9375rem] text-background/80 leading-relaxed max-w-2xl">
-              FightSAM is the developer home for this toolkit — quickstarts and API
+              FightCSAM is the developer home for this toolkit — quickstarts and API
               docs for every tool, a guided golden path to a compliant pipeline, and
               an analyzed directory of the wider open-source safety-tools ecosystem.
             </p>
@@ -365,7 +365,7 @@ export default function ToolsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-background text-foreground px-4 py-2.5 rounded-md text-sm font-medium hover:bg-background/90 transition-colors"
             >
-              Visit FightSAM ↗
+              Visit FightCSAM ↗
             </a>
           </div>
         </div>
