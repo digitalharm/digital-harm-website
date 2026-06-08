@@ -58,7 +58,7 @@ export default function Home() {
                 A Research Synthesis · 2026
               </p>
               <h1 className="font-serif font-semibold text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] leading-[0.98] tracking-[-0.02em] text-foreground mb-7">
-                Pornography, addiction, and the technologies that protect children online.
+                The harms of pornography and online exploitation &mdash; and the research, treatment, and tools that counter them.
               </h1>
               <p className="font-serif text-[1.25rem] md:text-[1.3125rem] leading-snug text-muted max-w-2xl">
                 A synthesis of peer-reviewed research, government statistics, and clinical evidence on
