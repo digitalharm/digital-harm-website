@@ -22,7 +22,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Digital Harm Project — Pornography, CSAM, and Protective Technologies",
+    default: "The Digital Harm Project — Pornography, CSAM, and the Research That Counters Them",
     template: "%s — The Digital Harm Project",
   },
   description:
