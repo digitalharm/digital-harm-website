@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import { adjacentChapters, chapters, findChapter } from "@/content/report";
 import { BlockRenderer } from "@/components/blocks";
 import { FeaturedProgram } from "@/components/featured-program";
+import { JsonLd } from "@/components/jsonld";
+import { articleSchema, breadcrumbListSchema } from "@/lib/seo/schema";
+import { gitLastModified } from "@/lib/route-dates";
 
 export function generateStaticParams() {
   return chapters.map((c) => ({ slug: c.slug }));
@@ -31,9 +34,25 @@ export default async function ChapterPage({
   if (!chapter) notFound();
 
   const { prev, next } = adjacentChapters(slug);
+  // Honest, git-derived freshness signal (all chapters derive from one module).
+  const dateModified = gitLastModified("content/locales/en/report.ts").toISOString();
 
   return (
     <article className="bg-background">
+      <JsonLd
+        data={[
+          articleSchema({
+            title: chapter.title,
+            description: chapter.dek,
+            path: `/report/${slug}`,
+            dateModified,
+          }),
+          breadcrumbListSchema([
+            { name: "The Digital Harm Project", path: "/" },
+            { name: `Chapter ${chapter.number}: ${chapter.title}`, path: `/report/${slug}` },
+          ]),
+        ]}
+      />
       <header className="border-b border-rule">
         <div className="max-w-6xl mx-auto px-5 pt-12 pb-12 md:pt-16 md:pb-16">
           <div className="flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] mb-8">
