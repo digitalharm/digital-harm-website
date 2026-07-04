@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageSchema } from "@/components/page-schema";
 
 export const metadata: Metadata = {
   title: "CSAM by the Numbers",
@@ -154,6 +155,7 @@ const GROUPS: StatGroup[] = [
 export default function CsamStatisticsPage() {
   return (
     <article className="bg-background">
+      <PageSchema path="/csam-statistics" />
       <header className="border-b border-rule">
         <div className="max-w-4xl mx-auto px-5 pt-12 pb-10 md:pt-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent mb-4">

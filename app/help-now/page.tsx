@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Triage } from "@/components/triage";
+import { PageSchema } from "@/components/page-schema";
 
 export const metadata: Metadata = {
   title: "Get Help Now",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function HelpNowPage() {
   return (
     <article className="bg-background min-h-screen">
+      <PageSchema path="/help-now" />
       <header className="border-b border-rule">
         <div className="max-w-2xl mx-auto px-5 pt-10 pb-7 md:pt-14">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-crisis mb-3">

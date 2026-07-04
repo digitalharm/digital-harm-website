@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageSchema } from "@/components/page-schema";
 
 export const metadata: Metadata = {
   title: "For Survivors",
@@ -194,6 +195,7 @@ const resources = [
 export default function ForVictimsPage() {
   return (
     <article className="bg-background">
+      <PageSchema path="/for-victims" />
       <header className="border-b border-rule">
         <div className="max-w-6xl mx-auto px-5 pt-14 pb-12 md:pt-20 md:pb-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent mb-5">

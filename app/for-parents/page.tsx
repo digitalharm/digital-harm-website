@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageSchema } from "@/components/page-schema";
 
 export const metadata: Metadata = {
   title: "For Parents",
@@ -21,6 +22,7 @@ const TOC: Section[] = [
 export default function ForParentsPage() {
   return (
     <article className="bg-background">
+      <PageSchema path="/for-parents" />
       <header className="border-b border-rule">
         <div className="max-w-3xl mx-auto px-5 pt-12 pb-10 md:pt-16">
           <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.18em] mb-6">
